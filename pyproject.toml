@@ -1,0 +1,72 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "node-substrates"
+version = "0.1.0"
+description = "Hybrid graph visualization combining node-link diagrams with DR-based semantic substrates"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    { name = "Sjoerd Vink" },
+    { name = "Leonardo Christino" },
+    { name = "Michael Behrisch" },
+]
+keywords = [
+    "visualization",
+    "graph",
+    "dimensionality-reduction",
+    "jupyter",
+    "widget",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Jupyter",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "anywidget>=0.9.0",
+    "traitlets>=5.0",
+    "networkx>=3.0",
+    "numpy>=1.20",
+    "scikit-learn>=1.0",
+    "umap-learn>=0.5",
+    "pandas>=1.5",
+    "ipywidgets>=8.1.8",
+    "jupyterlab>=4.5.0",
+    "matplotlib>=3.5",
+    "node2vec>=0.5.0",
+    "watchfiles>=1.1.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "jupyterlab>=4.0",
+    "ruff>=0.4",
+]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E501"]
+
+[tool.hatch.build]
+artifacts = ["js/dist/*"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/node_substrates"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-playwright>=0.7.1",
+]

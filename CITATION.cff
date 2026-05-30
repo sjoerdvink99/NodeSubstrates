@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use NodeSubstrates in your research, please cite it as below."
+type: software
+title: "NodeSubstrates: Bridging Node-Link Diagrams with DR-Based Semantic Substrates"
+authors:
+  - family-names: Vink
+    given-names: Sjoerd
+  - family-names: Christino
+    given-names: Leonardo
+  - family-names: Behrisch
+    given-names: Michael
+year: 2026
+publisher: "The Eurographics Association"
+conference: "EuroVis 2026"
+abstract: >
+  Multivariate graph visualization faces a fundamental tension between representing
+  network topology and showing attribute-driven structure. Existing techniques force
+  analysts to choose between these perspectives, hindering the inspection of
+  attribute-defined groupings within their structural context. Node-link diagrams
+  convey connectivity but obscure attribute relationships, while dimensionality
+  reduction projections expose attribute similarity at the cost of explicit edge
+  information. We present NodeSubstrates, a hybrid visualization technique that
+  integrates node-link diagrams with DR-based semantic substrates. Nodes are
+  selectively repositioned using dimensionality reduction on their attributes,
+  revealing clusters and outliers not visible in topological layouts. Substrate
+  regions can be interactively created and dissolved. We demonstrate NodeSubstrates
+  on real-world data, showing how the hybrid representation supports tasks spanning
+  attributes and graph structure.
+license: MIT
+repository-code: "https://github.com/sjoerdvink99/node-substrates"
+preferred-citation:
+  type: conference-paper
+  title: "NodeSubstrates: Bridging Node-Link Diagrams with DR-Based Semantic Substrates"
+  authors:
+    - family-names: Vink
+      given-names: Sjoerd
+    - family-names: Christino
+      given-names: Leonardo
+    - family-names: Behrisch
+      given-names: Michael
+  year: 2026
+  publisher: "The Eurographics Association"
+  conference: "EuroVis 2026"
